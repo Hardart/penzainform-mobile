@@ -1,0 +1,10 @@
+<div class="container-fluid overflow-auto test p-0">
+	<div class="row row-cols-auto text-center flex-row flex-nowrap gx-3 py-3 px-2">
+		<% categories.forEach((category) => {%>
+		<div class="col">
+			<a href=<%= category.link %> class="btn btn-primary shadow-sm text-uppercase fw-bold border-0"><%= category.title %></a>
+      </div>
+		<% })%>
+	</div>
+	
+</div>

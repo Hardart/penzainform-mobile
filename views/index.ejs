@@ -1,0 +1,74 @@
+<html lang="en">
+	<%- include('./partials/main/head'); -%>
+	<body >
+		<div class="container-xxl p-0 bg-light shadow" style="max-width: 550px;">
+
+			<header class="sticky-top">
+				<%- include('./partials/adds/a-hor', { adds: 1 }); -%>
+				<%- include('./partials/main/nav'); -%>
+			</header>
+
+			<%- include('./partials/main/category-carousel'); -%>
+
+			<%- include('./partials/adds/a-hor', { adds: 2 }); -%>
+			
+			<section class="px-2 my-2">
+				<%- include('./partials/parts/category-title', { title: 'Главное' }); -%>
+				<%- include('./partials/news/preview-main-news', { newsData: main[0] }); -%>
+			</section>
+			
+			<%- include('./partials/adds/a-hor', { adds: 3 }); -%>
+			
+			<section class="px-2 my-2">
+				<%- include('./partials/parts/category-title', { title: 'Важное' }); -%>
+				<%- include('./partials/news/important-news'); -%>
+			</section>
+
+			<%- include('./partials/adds/rc', { rc: 1, bg: 'info' }); -%>
+
+			<section class="px-2 mb-2">
+				<%- include('./partials/parts/category-title', { title: 'Лента новостей' }); -%>
+				<%- include('./partials/news/news-feed', { start: 0, end: 5}); -%>
+			</section>
+
+			<%- include('./partials/adds/a-ver', { adds: 4 }); -%>
+
+			<section class="px-2">
+				<%- include('./partials/parts/category-title', { title: 'В стране и мире' }); -%>
+				<%- include('./partials/news/world-news'); -%>
+			</section>
+
+			<%- include('./partials/adds/f'); -%>
+
+			<section class="px-2">
+				<%- include('./partials/parts/category-title', { title: 'Лента новостей' }); -%>
+				<%- include('./partials/news/news-feed', { start: 5, end: 10}); -%>
+			</section>
+
+			<%- include('./partials/adds/rc', { rc: 2, bg: 'warning' }); -%>
+
+			<section class="mt-2">
+				<%- include('./partials/parts/category-title', { title: 'Новости партнёров' }); -%>
+				<%- include('./partials/news/partners-news', { start: 5, end: 10}); -%>
+			</section>
+
+			<section class="px-2">
+				<%- include('./partials/parts/category-title', { title: 'Лента новостей' }); -%>
+				<%- include('./partials/news/news-feed', { start: 10, end: 15}); -%>
+			</section>
+
+			<%- include('./partials/adds/rc', { rc: 3, bg: 'danger' }); -%>
+
+			<section class="shadow-sm px-2 mb-2">
+				<%- include('./partials/news/news-feed', { start: 15, end: 32}); -%>
+			</section>
+
+			<section class="shadow px-2 mb-4">
+				<%- include('./partials/parts/category-title', { title: 'Обсуждение' }); -%>
+				<%- include('./partials/forum/discuss', { end: discuss.length}); -%>
+			</section>
+
+			<%- include('./partials/main/footer'); -%>
+		</div>
+	</body>
+</html>

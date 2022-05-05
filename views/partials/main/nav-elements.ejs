@@ -1,0 +1,17 @@
+<div class="collapse navbar-collapse position-absolute top-100 start-0 end-0 " id="navbarText" style="z-index: 200;">
+	<div class="navbar-nav-scroll" style="--bs-scroll-height: 370px;">
+		<ul class="navbar-nav px-3 pt-3 bg-light" >
+			<% menu.forEach((menuItem, i) => {%>
+			<li class="nav-item">
+				<% if (i == 0) {%>
+					<a class="nav-link py-1 fw-bold active" aria-current="page" href=<%= menuItem.link %>><%= menuItem.title %></a>
+				<% } else {%>
+					<a class="nav-link py-1 fw-bold" aria-current="page" href=<%= menuItem.link %>><%= menuItem.title %></a>
+				<% } %>
+				<hr class="text-primary my-1" style="height: 2px;">
+			</li>
+			<% })%>
+		</ul>
+		<%- include('./sub-nav-elements'); -%>
+	</div>
+</div>

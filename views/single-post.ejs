@@ -1,0 +1,23 @@
+<html lang="en">
+	<%- include('./partials/main/head'); -%>
+	<body>
+		<div class="container-xxl p-0 bg-light" style="max-width: 550px;">
+
+			<header class="sticky-top">
+				<%- include('./partials/adds/a-hor', { adds: 1 }); -%>
+				<%- include('./partials/main/nav'); -%>
+			</header>
+
+			<%- include('./partials/adds/a-hor', { adds: 2 }); -%>
+
+			<%- include('./partials/news/single-news'); -%>
+			<%- include('./partials/parts/subscribe-to-socials'); -%>
+			
+			<%- include('./partials/adds/a-hor', { adds: 3 }); -%>
+			
+			<%- include('./partials/news/single-news-content'); -%>
+
+			<%- include('./partials/main/footer'); -%>
+		</div>
+	</body>
+</html>

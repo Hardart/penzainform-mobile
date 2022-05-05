@@ -1,0 +1,11 @@
+<ul class="navbar-nav px-3 pt-1 bg-white">
+   <% subMenu.forEach((subMenuItem, i) => {%>
+   <li class="nav-item">
+      <% if (subMenu.length != i + 1) {%>
+         <a class="nav-link py-1" aria-current="page" href=<%= subMenuItem.link %>><%= subMenuItem.title %></a>
+      <% } else {%>
+         <a class="nav-link py-1 fw-bold" aria-current="page" href=<%= subMenuItem.link %>><%= subMenuItem.title %></a>
+      <% } %>
+   </li>
+   <% })%>
+</ul>

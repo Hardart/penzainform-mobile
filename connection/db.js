@@ -1,10 +1,10 @@
 const mysql = require('mysql2')
 function connect() {
 	const connection = mysql.createConnection({
-		host: 'server10.hosting.reg.ru',
-		user: 'u1572118_hardart',
-		password: 'lU0oT7nG5ibW4v',
-		database: 'u1572118_penzainform_mobile',
+		host: process.env.DB_HOST,
+		user: process.env.DB_USER,
+		password: process.env.DB_PASSWORD,
+		database: process.env.DB_NAME,
 	})
 	return connection
 }
